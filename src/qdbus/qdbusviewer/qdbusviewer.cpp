@@ -88,6 +88,7 @@ QDBusViewer::QDBusViewer(const QDBusConnection &connection, QWidget *parent)  :
 
     servicesView = new QTableView(this);
     servicesView->setModel(servicesProxyModel);
+    servicesView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     // Make services grid view behave like a list view with headers
     servicesView->verticalHeader()->hide();
     servicesView->horizontalHeader()->setStretchLastSection(true);
